@@ -47,7 +47,7 @@ blogPostRoute.get("/:blogPostID", (req, res, next) => {
         if(blogPost){
             res.send(blogPost)
         }else{
-            res.send("blogPost not found!")
+            res.status(404).send("blogPost not found!")
         }
     } catch (error) {
         next(error)
